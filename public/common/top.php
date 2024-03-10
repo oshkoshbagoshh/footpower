@@ -22,7 +22,7 @@
             <article role="contentinfo">
                 <div>
 
-                    <h1><?php echo $page_title ?> </h1>
+                    <h1><?php echo $page_title ?> </h1> 
                 </div>
     </header>></header>
     <header class="header-title">
