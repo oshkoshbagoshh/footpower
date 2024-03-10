@@ -5,3 +5,4 @@
 	define('DATABASE', 'footpower');
 
 
+var_dump(HOST);

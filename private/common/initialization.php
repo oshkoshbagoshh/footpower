@@ -12,7 +12,12 @@
 
 
 // Report all errors and warnings
-error_reporting(E_ALL | E_STRICT); //TODO: change this after testing is complete 
+error_reporting(E_ALL | E_STRICT); 
+
+/***
+ *  //TODO: change this after testing is complete 
+ *  set display errors to 0, logging of errors to 1 and set the error log to the private directory 
+ */
 
 // 
 
@@ -32,7 +37,7 @@ if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
 
 
 // include the constants
-require_once 'constants.php';
+include_once 'constants.php';
 
 // =======================
 // 2.  connect to the database
