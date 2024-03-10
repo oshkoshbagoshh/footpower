@@ -12,7 +12,7 @@
 
 
 // Report all errors and warnings
-error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL | E_STRICT); //TODO: change this after testing is complete 
 
 // 
 
@@ -24,7 +24,7 @@ session_start();
 if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
     // generate a fresh token and store it in the session
     $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(16));
-    $_SESSION['token_expires'] = time() + 900;
+    $_SESSION['token_expires'] = time() + 900; // 15 minutes 
     $_SESSION['log_id'] = 1;
 }
 
