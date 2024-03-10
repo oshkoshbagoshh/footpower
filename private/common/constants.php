@@ -1,8 +1,8 @@
 <?php 
 	define('HOST','localhost');
 	define('USER', 'root');
-	define('PASSWORD', '');
+	define('PASSWORD', 'root');
 	define('DATABASE', 'footpower');
 
 
-var_dump(HOST);
+// var_dump(HOST);
