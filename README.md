@@ -1,11 +1,17 @@
-# TITLE 
+# footpower
 
-## DESCRIPTION
+Basic CRUD application allowing users to track their activities.
 
-## TABLE OF CONTENTS
+## Description
 
-## FEATURES 
+_Reject modernity! Embrace tradition!__
 
-## USAGE 
+Back in my day, you didn't have all of these fancy frameworks. All we had was the LAMP stack. And we were better off for it.
+
+## Table of Contents
 
 
+## Features
+
+
+## Usage
