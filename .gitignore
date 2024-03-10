@@ -1,0 +1,45 @@
+todo.todo
+/DS_Store
+```
+# Ignore composer dependencies
+/vendor/
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore build artifacts
+/build/
+/dist/
+
+# Ignore logs
+/log/
+
+# Ignore cache
+/cache/
+
+# Ignore session files
+/sessions/
+
+# Ignore uploaded files
+/uploads/
+
+# Ignore configuration files with sensitive information
+/config/*.env
+
+# Ignore database files
+/database/
+
+# Ignore compiled code
+*.phpc
+*.phar
+
+# Ignore error logs
+/error.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
