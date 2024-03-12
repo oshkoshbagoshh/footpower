@@ -15,7 +15,7 @@ session_start();
 echo $_SERVER['HTTP_USER_AGENT'];
 
 
-var_dump($_SESSION);
+echo "<p> <b>Session Info:</b> </p>\t "; var_dump($_SESSION);
 
 
 // Create a unique token 
