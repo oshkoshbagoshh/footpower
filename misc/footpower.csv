@@ -1,0 +1,3 @@
+"activity_id","log_id","type","date","distance","duration"
+"log_id","user_ud","creation_data"
+"user_id","username","distance_unit","verification_code","verified","creation_date"
