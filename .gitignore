@@ -1,0 +1,33 @@
+# Composer dependencies
+/vendor/
+
+# Composer itself
+composer.phar
+
+# Laravel specific
+/.env
+/.env.*.php
+/.env.php
+/.env.testing
+
+# Symfony specific
+/app/config/parameters.yml
+/app/config/parameters.php
+/var/sessions/
+/var/cache/
+/var/logs/
+
+# Generic
+*.log
+*.cache
+*.tmp
+
+# IDEs and editors
+/.idea/
+/.vscode/
+/nbproject/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
