@@ -1,0 +1,20 @@
+{
+    "name": "aj/footpower",
+    "description": "A basic app for users to log activities",
+    "require": {
+        "league/climate": "^3.8",
+        "fakerphp/faker": "^1.23"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aj\\Footpower\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "oshkoshbagoshh",
+            "email": "amirjavadi25@gmail.com"
+        }
+    ]
+}
