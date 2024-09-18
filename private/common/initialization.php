@@ -4,7 +4,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2024-09-18 17:35:45 
  * @Last Modified by: AJ Javadi
- * @Last Modified time: 2024-09-18 18:30:40
+ * @Last Modified time: 2024-09-18 18:34:01
  * @Description: Back-end chores for web app initialization
  */
 
@@ -28,6 +28,10 @@ foreach ($required_env_vars as $var) {
 // Set error reporting
 error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', $_ENV['APP_DEBUG'] ?? '0');
+// TODO: when going live, change this to 
+// ini_set('display_errors', 0);
+// ini_set('log_errors', 1);
+// ini_set('error_log','../logs/error_log');
 
 // Start or resume session
 session_start();
@@ -69,3 +73,5 @@ try {
 if ($_ENV['APP_DEBUG'] === 'true') {
     var_dump($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS']);
 }
+
+
