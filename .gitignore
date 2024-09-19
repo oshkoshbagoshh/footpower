@@ -26,6 +26,7 @@ composer.phar
 /.idea/
 /.vscode/
 /nbproject/
+/.phpintel/
 
 # Operating system files
 .DS_Store

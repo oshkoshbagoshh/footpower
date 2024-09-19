@@ -13,7 +13,7 @@
 
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASSWORD','');
+define('PASSWORD','rootroot');
 define('DATABASE', 'footpower');
 
 
