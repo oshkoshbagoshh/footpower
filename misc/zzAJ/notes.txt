@@ -1,0 +1,38 @@
+footpower/
+│
+├── public/
+│   └── index.php
+│
+├── src/
+│   ├── Config/
+│   │   └── Database.php
+│   │
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Log.php
+│   │   └── Activity.php
+│   │
+│   ├── Controllers/
+│   │   ├── UserController.php
+│   │   ├── LogController.php
+│   │   └── ActivityController.php
+│   │
+│   ├── Views/
+│   │   ├── users/
+│   │   ├── logs/
+│   │   └── activities/
+│   │
+│   └── Utils/
+│       └── Helpers.php
+│
+├── tests/
+│
+├── scripts/
+│   ├── create_database.sql
+│   └── seed_database.php
+│
+├── vendor/
+│
+├── .gitignore
+├── composer.json
+└── README.md
