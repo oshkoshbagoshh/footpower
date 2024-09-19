@@ -32,7 +32,7 @@ CREATE TABLE `activities` (
   `log_id` int(11) NOT NULL,
   `type` varchar(25) NOT NULL,
   `date` date NOT NULL,
-  `distance` decimal(10,0) NOT NULL,
+  `distance` decimal(10,6) NOT NULL,
   `duration` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='used to log records to the user''s foot-propelled activities';
 
@@ -151,3 +151,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
