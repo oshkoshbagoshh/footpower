@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99cb7abd85b0a760b620267ec2fc8557",
+    "content-hash": "d5a4f406af13a2479e98ecf545bcdd55",
     "packages": [
         {
             "name": "fakerphp/faker",
@@ -823,10 +823,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {
+        "php": "^7.4|^8.3"
+    },
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
