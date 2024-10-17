@@ -10,5 +10,5 @@
 
  <?php 
 
- //TODO: set up private, public directories with subdirectories in them.
+ // TODO: set up private, public directories with subdirectories in them.
  
