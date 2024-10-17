@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!-- TOP -->
 <?php
 include_once('../private/common/initialization.php');
