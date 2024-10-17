@@ -1,0 +1,181 @@
+/*****
+* Stylesheet for Footpower
+*
+*/
+
+/* Reset some default styles and provide a clean slate*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside {
+
+}
+
+
+
+/* General form styles */
+#data-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.control-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and select styles */
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Duration input group */
+#activity-duration input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.data-save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.data-save-button:hover {
+    background-color: #45a049;
+}
+
+.btn-plain {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.btn-plain:hover {
+    background-color: #e1e1e1;
+}
+
+.data-delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.data-delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Message and error styles */
+.result-text,
+.error-message,
+.form-message {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #f44336;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .control-wrapper {
+        width: 100%;
+    }
+}
+
+
+aside {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #4CAF50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+aside p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+aside a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        margin: 20px 0;
+        border-left: none;
+        border-top: 4px solid #4CAF50;
+    }
+}
