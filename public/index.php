@@ -1,3 +1,8 @@
+
+
+<!-- TOP -->
+<?php
+
 /*
 * @Author: AJ Javadi
 * @Email: amirjavadi25@gmail.com
@@ -7,9 +12,6 @@
 * @Description: file:///Applications/XAMPP/xamppfiles/htdocs/footpower/public/index.php
 * Web Root Directory
 */
-
-<!-- TOP -->
-<?php
 
 include_once('../private/common/initialization.php');
 $page_title = 'Home';
