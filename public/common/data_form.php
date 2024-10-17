@@ -1,11 +1,5 @@
 
 
-/****
- *  Data form to collect info
- *  need to style the form appropriately from MDN
- *
- */
-
 <form id="data-form">
     <div class="form-wrapper">
         <div class="form-row">
