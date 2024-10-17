@@ -2,10 +2,16 @@
     "name": "aj/footpower",
     "description": "A basic app for users to log activities",
     "require": {
-        "php": "^7.4|^8.3",
+        "php": "^8.3",
         "league/climate": "^3.8",
         "fakerphp/faker": "^1.23",
         "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public"
     },
     "license": "MIT",
     "autoload": {
