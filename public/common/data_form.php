@@ -1,5 +1,3 @@
-
-
 <form id="data-form">
     <div class="form-wrapper">
         <div class="form-row">
@@ -25,7 +23,7 @@
                        data-distance="0" aria-label="The distance of the activity">
 
                 <span><?php echo $_SESSION['distance_unit'] ?>
-                    (a href="your_account.php">change</a>)</span>
+                   ( <a href="your_account.php">change</a>)</span>
             </div>
             <div class="control-wrapper" id="activity-duration">
                 <label for="activity-duration">Duration (hh:mm:ss)</label>

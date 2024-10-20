@@ -22,7 +22,7 @@ function initializeCreateDataForm() {
 }
 
 // Send the form data to the server
-$('#data-form').submit(function(e) {
+$('#data-form').submit(function (e) {
 
     // Prevent default submission
     e.preventDefault();
@@ -34,5 +34,29 @@ $('#data-form').submit(function(e) {
     var formData = $(this).serializeArray();
 
     // Submit the data to the handler
+    $.post('/handlers/data_handler.php', formData, function (data) {
 
-})
+        // Convert JSON string to a JavaaScript object
+        var result = JSON.parse(data);
+
+        if (result.status === 'error') {
+
+            // Display error
+            $('#form-error').html(result.message).css('display', 'inline-block');
+
+            // Enable the save button
+            $('#data-save-button').prop('disabled', false);
+
+
+        } else {
+
+            // display the success message
+            $('#form-message').html(result.message).css('display', 'inline-block');
+
+            // Return to the home page after 3 seconds
+            window.setTimeout("window.location='index.php'", 3000);
+        }
+
+    });
+});
+
