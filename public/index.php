@@ -7,7 +7,11 @@ include_once('./common/top.php');
 <!-- TOP ENDS -->
 
 <!-- MAIN CONTENT -->
-<p> Main app content goes here</p>
+<div class="activity-log-toolbar" role="toolbar">
+    <label for="activity-filter"
+</div>
+
+
 
 <!-- END MAIN -->
 
