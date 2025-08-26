@@ -36,3 +36,12 @@ footpower/
 ├── .gitignore
 ├── composer.json
 └── README.md
+
+
+=============
+TODO:
+- add PHP Debug bar to front end
+- error logging / monolog
+- refactor with Alpine.js
+- use typescript
+-

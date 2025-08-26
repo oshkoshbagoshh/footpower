@@ -167,18 +167,63 @@ class Data
      * @return void
      */
     public
-    function readAllData()
+    function readAllData(): void
     {
 
         // read ALl Data
+        //Store the default status
+        $server_results['status'] = 'success';
+
+        // Check the log-id field
+        if (empty($log_id)) {
+            $server_results['status'] = 'error';
+            $server_results['message'] = 'Error: Missing log ID';
+        } else {
+            // Sanitize it to an integer
+            $log_id = filter_var($log_id, FILTER_SANITIZE_NUMBER_FLOAT);
+            if (!$log_id) {
+                $server_results['status'] = 'error';
+                $server_results['message'] = 'Error: Invalid log ID';
+
+            }
+
+        }
+
+        if ($server_results['status'] === 'success') {
+
+            // create the SQL template
+            $sql = "SELECT * FROM  activities       
+                                WHERE log_id=?
+                                ORDER BY date DESC";
+
+            // Prepare the statement template
+            $stmt = $this->_mysqli->prepare($sql);
+
+            // Bind the parameter
+            $stmt->bind_param("i", $log_id);
+
+            // Execute the prepared statement
+            $stmt->execute();
+
+            // Get the results
+            $result = $stmt->get_result();
+
+            if($this->_mysqli->errno === 0) {
+                // Get the query rows as an associative array
+                $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+                // Convert the array to JSON, then output it
+                $JSON_data = json_encode($rows, JSON_HEX_APOS | JSON_HEX_QUOT);
+                return $JSON_data;
+            }
+        }
 
     }
 
     /**
      * @return void
      */
-    public
-    function readDataItem()
+    public function readDataItem()
     {
 
         // read one data Item
