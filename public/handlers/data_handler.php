@@ -1,10 +1,10 @@
 <?php
 
     // initialize the app
-    include_once  '../../private/common/initialization.php';
+    include_once '../../src/common/initialization.php';
 
     // Include the data class
-    include_once  '../../private/classes/data_class.php';
+    include_once '../../src/classes/data_class.php';
 
     // Initialize the results
 

@@ -34,7 +34,7 @@ if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
 include_once 'constants.php';
 
 // Connect to the database
-$mysqli = new MySQLi(HOST, USER, PASSWORD, DATABASE);
+$mysqli = new MySQLi(HOST, USER, PASSWORD, DATABASE, PORT);
 
 // check for an error
 if ($mysqli->connect_error) {

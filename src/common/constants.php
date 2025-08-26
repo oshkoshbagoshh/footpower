@@ -10,17 +10,18 @@
  */
 
 
-define('HOST', 'localhost');
+define('HOST', '127.0.0.1');
 define('USER', 'root');
 define('PASSWORD','');
 define('DATABASE', 'footpower');
+define('PORT', '3306');
 
 
 // DATABASE CONFIGURATION
-echo "-- DATABASE CONFIGURATION --\n";
-echo "Host is " . constant('HOST') . "\n";
-echo "User is " . constant('USER') ."\n";
-echo "Password is " . constant('PASSWORD') ."\n";
-echo "Database is " . constant('DATABASE') ."\n";
-echo "----------\n";
+//echo "-- DATABASE CONFIGURATION --\n";
+//echo "Host is " . constant('HOST') . "\n";
+//echo "User is " . constant('USER') ."\n";
+//echo "Password is " . constant('PASSWORD') ."\n";
+//echo "Database is " . constant('DATABASE') ."\n";
+//echo "----------\n";
 //

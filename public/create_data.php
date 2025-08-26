@@ -1,6 +1,6 @@
 <?php
 
-include_once '../private/common/initialization.php';
+include_once '../src/common/initialization.php';
 
 $page_title = 'Add an Activity';
 
