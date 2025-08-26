@@ -1,8 +1,7 @@
-<!-- TOP -->
 <?php
-
 include_once '../src/common/initialization.php';
 $page_title = 'Home';
+// TOP
 include_once('./common/top.php');
 ?>
 <!-- TOP ENDS -->
@@ -16,17 +15,10 @@ include_once('./common/top.php');
 
 
 <!-- SIDE BAR  -->
-<?php
-include_once('./common/sidebar.php');
-?>
+<?php include_once('./common/sidebar.php'); ?>
 <!-- END SIDEBAR -->
-<br>
-<hr>
-
 
 <!-- FOOTER / BOTTOM -->
-<?php
+<?php include_once('./common/bottom.php'); ?>
 
-include_once('./common/bottom.php');
-?>
 <!-- END FOOTER / BOTTOM -->

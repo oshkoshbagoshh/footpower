@@ -1,3 +1,18 @@
+<?php
+/***
+ *
+ *
+ * This form gathers four bits of info from the user: the activity type, the activity date, the distance, which can be expressed in kilometers or miles, and the duration (seperate fields for hours, minutes, seconds)
+ *
+ * there are also hidden fields:
+ *   - log-id: the ID of the log to which the new item will be added, as givve by $_SESSION['log_id'] variable. for now it's just set to 1 for the default test user
+ * - activity-id: during an update task, the ID of the activity the user is currently editing
+ * - data-verb: the type of CRUD verb the form is for (such as create or update)
+ * - token: the current session token, as given by PHP's $_SESSION['token'] variable
+ */
+
+?>
+
 <form id="data-form">
     <div class="form-wrapper">
         <div class="form-row">

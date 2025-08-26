@@ -4,7 +4,7 @@
     include_once '../../src/common/initialization.php';
 
     // Include the data class
-    include_once '../../src/classes/data_class.php';
+    include_once '../../src/classes/Data.php';
 
     // Initialize the results
 
@@ -42,7 +42,9 @@
     else {
 
         // Create a new Data object
-        $data = new Data($mysqli);
+        /** @var Data data $mysqli */
+        $data = new Data(mysqli: $mysqli);
+
 
         // Pass the data verb to the appropriate method
         switch ($_POST['data-verb']) {
@@ -82,8 +84,10 @@
     }
 
     // create and then output the JSON data
-    $JSON_data = json_encode($server_results, JSON_HEX_APOS | JSON_HEX_QUOT);
+    $JSON_data = json_encode($server_results, JSON_THROW_ON_ERROR | JSON_HEX_APOS | JSON_HEX_QUOT);
     echo $JSON_data;
 
 
+//print_r($data);
+//var_dump($JSON_data);
 

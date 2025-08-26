@@ -1,29 +1,62 @@
 {
-    "name": "aj/footpower",
-    "description": "A basic app for users to log activities",
-    "require": {
-        "php": "^8.4",
-        "league/climate": "^3.8",
-        "fakerphp/faker": "^1.23",
-        "vlucas/phpdotenv": "^5.6",
-      "ext-mysqli": "*"
-    },
-    "require-dev": {
-      "roave/security-advisories": "dev-latest"
-    },
-    "scripts": {
-        "dev": "php -S localhost:8000 -t public"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Aj\\Footpower\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "oshkoshbagoshh",
-            "email": "amirjavadi25@gmail.com"
-        }
+  "name": "oshkoshbagoshh/footpower",
+  "description": "A basic app for users to log activities",
+  "require": {
+    "php": "^8.2",
+    "ext-mysqli": "*",
+    "monolog/monolog": "^3.9"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^12.3",
+    "friendsofphp/php-cs-fixer": "@stable",
+    "squizlabs/php_codesniffer": "@stable",
+    "php-debugbar/php-debugbar": "*"
+  },
+  "scripts": {
+    "dev": "php -S localhost:8000 -t public",
+    "test": "vendor/bin/phpunit",
+    "cs-check": [
+      "vendor/bin/php-cs-fixer fix --dry-run --diff --ansi",
+      "vendor/bin/phpcs --standard=PSR12 -q"
+    ],
+    "cs-fix": [
+      "vendor/bin/php-cs-fixer fix --ansi",
+      "vendor/bin/phpcbf --standard=PSR12 -q"
+    ],
+    "post-install-cmd": [
+      "composer dump-autoload -o"
+    ],
+    "post-update-cmd": [
+      "composer dump-autoload -o"
     ]
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Oshkoshbagoshh\\Footpower\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  },
+  "authors": [
+    {
+      "name": "oshkoshbagoshh",
+      "email": "amirjavadi25@gmail.com"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "Oshkoshbagoshh\\Footpower\\Tests\\": "tests/"
+    },
+    "classmap": [
+      "tests/"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  }
 }

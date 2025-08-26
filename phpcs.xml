@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="MyProject">
+    <rule ref="PSR12"/>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+</ruleset>

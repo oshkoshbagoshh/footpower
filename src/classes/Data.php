@@ -13,15 +13,26 @@ class Data
 {
 
     // holds the app's current MySQLi object
-    private $_mysqli;
+    /**
+     * @var mixed|null
+     */
+    private mixed $_mysqli;
 
     // use the class constructor to store the passed MySQLi object
-    public function __construct($mysqli = NULL)
+
+    /**
+     * @param $mysqli
+     */
+    public function __construct($mysqli = null)
     {
         $this->_mysqli = $mysqli;
     }
 
     // CRUD
+
+    /**
+     * @return false|string|void
+     */
     public function createData()
     {
 
@@ -68,7 +79,8 @@ class Data
                                         $server_results['message'] = 'Error: Missing activity date';
                                     } else {
                                         // Check for a valid date (pattern matching of YYYY-MM-DD
-                                        if (!preg_match('/^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/', $activity_date)) {
+                                        if (!preg_match('/^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/',
+                                            $activity_date)) {
                                             $server_results['status'] = 'error';
                                             $server_results['message'] = 'Error: Invalid activity date';
                                         }
@@ -92,7 +104,8 @@ class Data
             $activity_distance = $_POST['activity-distance'];
 
             // Sanitize it to a floating-point value
-            $activity_distance = filter_var($activity_distance, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+            $activity_distance = filter_var($activity_distance, FILTER_SANITIZE_NUMBER_FLOAT,
+                FILTER_FLAG_ALLOW_FRACTION);
 
             // Check the activity-duration-hours field
             $activity_hours = 0;
@@ -121,18 +134,19 @@ class Data
                 $sql = "INSERT INTO activities (log_id, type, date,distance, duration)
                         VALUES (?,?,?,?,?)";
 
-                // Prepare the statement template
+//                // Prepare the statement template
                 $stmt = $this->_mysqli->prepare($sql);
-
-                // Bind the parameters
-                $stmt->bind_param("issds", $log_id, $activity_type, $activity_date, $activity_distance, $activity_duration);
-
-                // Execute the prepared statement
+//
+//                // Bind the parameters
+                $stmt->bind_param("issds", $log_id, $activity_type, $activity_date, $activity_distance,
+                    $activity_duration);
+//
+//                // Execute the prepared statement
                 $stmt->execute();
-
-                // Get the results
+//
+//                // Get the results
                 $result = $stmt->get_results();
-
+//
                 if ($this->_mysqli->errno === 0) {
                     $server_results['message'] = 'Activity saved successfully! Sending you back to the activity log...';
                 } else {
@@ -140,53 +154,56 @@ class Data
                     $server_results['message'] = 'MySQLi error #: ' . $this->_mysqli->errorno . ': ' . $this->_mysqli->error;
                 }
 
-                //            create and then output the JSON data
+//                //            create and then output the JSON data
                 $JSON_data = json_encode($server_results, JSON_HEX_APOS | JSON_HEX_QUOT);
-
+//
                 return $JSON_data;
             }
         }
     }
 
 
+    /**
+     * @return void
+     */
+    public
+    function readAllData()
+    {
 
+        // read ALl Data
 
+    }
 
+    /**
+     * @return void
+     */
+    public
+    function readDataItem()
+    {
 
+        // read one data Item
 
+    }
 
+    /**
+     * @return void
+     */
+    public
+    function updateData()
+    {
 
+        // update data
+    }
 
+    /**
+     * @return void
+     */
+    public
+    function deleteData()
+    {
 
-public
-function readAllData()
-{
-
-    // read ALl Data
-
-}
-
-public
-function readDataItem()
-{
-
-    // read one data Item
-
-}
-
-public
-function updateData()
-{
-
-    // update data
-}
-
-public
-function deleteData()
-{
-
-    // delete data
-}
+        // delete data
+    }
 
 
 }

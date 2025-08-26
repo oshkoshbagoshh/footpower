@@ -1,0 +1,3 @@
+- add PHP Debug bar to front end
+- error logging / monolog
+-
