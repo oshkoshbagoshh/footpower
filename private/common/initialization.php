@@ -11,16 +11,16 @@
 
 // make sure we see all errors and warnings
 // DEV MODE error reporting
-error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL );
 // LIVE MODE Error Reporting
 //ini_set('display_errors', 0);
 //ini_set('log_errors', 1);
 //ini_set('error_log', '../private/logs/error_log');
 
 
-
 // start a session
 session_start();
+
 
 // have we not created a token for this session, or has the token expired?
 if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
@@ -42,6 +42,7 @@ if ($mysqli->connect_error) {
     Error #' . $mysqli->connect_errno . ': ' . $mysqli->connect_error;
     exit(0);
 }
+
 
 
 

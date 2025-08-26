@@ -12,15 +12,15 @@
 
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASSWORD','rootroot');
+define('PASSWORD','');
 define('DATABASE', 'footpower');
 
 
 // DATABASE CONFIGURATION
-//echo "-- DATABASE CONFIGURATION --\n";
-//echo "Host is " . constant('HOST') . "\n";
-//echo "User is " . constant('USER') ."\n";
-//echo "Password is " . constant('PASSWORD') ."\n";
-//echo "Database is " . constant('DATABASE') ."\n";
-//echo "----------\n";
+echo "-- DATABASE CONFIGURATION --\n";
+echo "Host is " . constant('HOST') . "\n";
+echo "User is " . constant('USER') ."\n";
+echo "Password is " . constant('PASSWORD') ."\n";
+echo "Database is " . constant('DATABASE') ."\n";
+echo "----------\n";
 //

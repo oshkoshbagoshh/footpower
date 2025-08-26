@@ -1,6 +1,7 @@
 <!-- TOP -->
 <?php
-include_once('../private/common/initialization.php');
+
+include_once '../private/common/initialization.php';
 $page_title = 'Home';
 include_once('./common/top.php');
 ?>
@@ -10,8 +11,6 @@ include_once('./common/top.php');
 <div class="activity-log-toolbar" role="toolbar">
     <label for="activity-filter"
 </div>
-
-
 
 <!-- END MAIN -->
 

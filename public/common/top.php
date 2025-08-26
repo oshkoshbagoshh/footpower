@@ -43,7 +43,7 @@
 
 </head>
 <body>
-<header role="banner"></header>
+<header role="banner">
 <main role="main">
     <article role="contentinfo">
         <header class="article-header" role="banner">
