@@ -28,6 +28,7 @@ include_once('./common/top.php');
 <section id="activity-log" class="activity-log">
 </section>
 
+
 <!-- This hidden form contains the values we need to read the data: log-id, data-verb, and token -->
 <form id="data-read-form" class="hidden">
     <input type="hidden" id="log-id" name="log-id" value="<?php echo $_SESSION['log_id']; ?>">
