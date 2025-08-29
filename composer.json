@@ -4,7 +4,8 @@
   "require": {
     "php": "^8.2",
     "ext-mysqli": "*",
-    "monolog/monolog": "^3.9"
+    "monolog/monolog": "^3.9",
+    "ext-curl": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

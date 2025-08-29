@@ -24,7 +24,7 @@ session_start();
 
 // have we not created a token for this session, or has the token expired?
 if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
-    $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(16));
+    $_SESSION['token'] = bin2hex('session&strong');
     $_SESSION['token_expires'] = time() + 900;
     $_SESSION['log_id'] = 1; // temporary - will change this to user's log ID value when signed in
 

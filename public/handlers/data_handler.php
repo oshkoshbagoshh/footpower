@@ -42,8 +42,8 @@
     else {
 
         // Create a new Data object
-        /** @var Data data $mysqli */
-        $data = new Data(mysqli: $mysqli);
+        /** @var Data $data data $mysqli */
+        $data = new mysqli();
 
 
         // Pass the data verb to the appropriate method
@@ -51,12 +51,16 @@
 
             // create a new data item
             case 'create':
-                $server_results = json_decode($data->createData());
+                try {
+                    $server_results = json_decode($data->createData(), false, 512, JSON_THROW_ON_ERROR);
+                } catch (JsonException $e) {
+
+                }
                 break;
 
             // read all data items
             case 'read-all-data':
-                $server_results = json_decode($data->readAllData());
+                $server_results = json_decode($data->readAllData(), false, 512, JSON_THROW_ON_ERROR);
                 break;
 
             // read one data item
