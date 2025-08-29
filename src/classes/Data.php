@@ -155,7 +155,7 @@ class Data
                 }
 
 //                //            create and then output the JSON data
-                $JSON_data = json_encode($server_results, JSON_HEX_APOS | JSON_HEX_QUOT);
+                $JSON_data = json_encode($server_results, JSON_THROW_ON_ERROR | JSON_HEX_APOS | JSON_HEX_QUOT);
 //
                 return $JSON_data;
             }
@@ -164,10 +164,10 @@ class Data
 
 
     /**
-     * @return void
+     * @return string|false
      */
     public
-    function readAllData(): void
+    function readAllData(): string|false
     {
 
         // read ALl Data

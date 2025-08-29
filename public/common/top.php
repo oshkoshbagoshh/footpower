@@ -64,7 +64,7 @@
             <?php endif; ?>
         </header>
 
-        <!-- Main content sections would go here -->
+        <!-- The main content sections would go here -->
     </article>
 </main>
 
