@@ -1,6 +1,14 @@
 <?php
 
-class User {
+class /**
+ * @Author: AJ Javadi
+ * @Email: amirjavadi25@gmail.com
+ * @Date: 2024-09-18 16:11:52
+ * @Last Modified by: AJ Javadi
+ * @Last Modified time: 2024-09-18 18:07:07
+ * @Description: file:///Applications/XAMPP/xamppfiles/htdocs/footpower/private/common/constants.php
+ * used to store our private constants
+ */User {
     private $_mysqli;
     public function __construct($mysqli = null) {
         $this->_mysqli = $mysqli;
