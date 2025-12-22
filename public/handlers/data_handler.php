@@ -42,13 +42,8 @@
     else {
 
         // Create a new Data object
-<<<<<<< Current (Your changes)
         /** @var Data $data data $mysqli */
         $data = new mysqli();
-=======
-        /** @var Data $data */
-        $data = new Data($mysqli);
->>>>>>> Incoming (Background Agent changes)
 
 
         // Pass the data verb to the appropriate method

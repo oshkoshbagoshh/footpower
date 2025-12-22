@@ -1,0 +1,10 @@
+[
+  {
+    "type": "sqlite",
+    "path": "x:\\db\\footpower.db"
+  },
+  {
+    "type": "sqlite",
+    "path": "x:\\htdocs\\footpower\\database\\dev.db"
+  }
+]

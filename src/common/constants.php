@@ -15,7 +15,13 @@ define('USER', 'root');
 define('PASSWORD','');
 define('DATABASE', 'footpower');
 define('PORT', '3306');
-
+define('TOKEN', 'session&strong');
+define('TOKEN_EXPIRES', 900);
+define('LOG_ID', 1);
+define('USER_ID', 1);
+define('ACTIVITY_ID', 1);
+define('LOG_ID', 1);
+define('LOG_ID', 1);
 
 // DATABASE CONFIGURATION
 //echo "-- DATABASE CONFIGURATION --\n";
