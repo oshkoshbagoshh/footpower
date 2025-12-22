@@ -51,7 +51,18 @@
     </div>
 
     <nav aria-label="Main navigation" class="main-nav">
-        <!-- Navigation items would go here -->
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <div class="nav-user-info">
+                <span class="nav-username"><?php echo htmlspecialchars($_SESSION['username'] ?? 'User', ENT_QUOTES, 'UTF-8'); ?></span>
+                <a href="your_account.php" class="nav-link">My Account</a>
+                <a href="logout.php" class="nav-link">Logout</a>
+            </div>
+        <?php else: ?>
+            <div class="nav-auth-links">
+                <a href="login.php" class="nav-link">Login</a>
+                <a href="register.php" class="nav-link">Register</a>
+            </div>
+        <?php endif; ?>
     </nav>
 </header>
 

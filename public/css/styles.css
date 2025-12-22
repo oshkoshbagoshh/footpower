@@ -510,3 +510,120 @@ tbody td.edit i:hover {
     border: 0;
 }
 
+/* ============================================
+   Authentication Pages Styles
+   ============================================ */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: var(--spacing-xl);
+}
+
+.auth-form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-form-wrapper h2 {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text);
+}
+
+.auth-links {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.auth-links p {
+    margin: 0;
+    color: var(--color-text-light);
+}
+
+.auth-links a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.help-text {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-left: auto;
+}
+
+.nav-user-info,
+.nav-auth-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav-username {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.nav-link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.nav-link:hover {
+    background-color: var(--color-background);
+    text-decoration: none;
+}
+
+/* Form Error Styles */
+.error-message {
+    display: block;
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: #ffebee;
+    border-left: 3px solid var(--color-error);
+    border-radius: var(--border-radius-sm);
+}
+
+.form-message {
+    display: block;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: #e8f5e9;
+    border-left: 3px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+}
+
+input.error {
+    border-color: var(--color-error);
+    border-width: 2px;
+}
+

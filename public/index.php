@@ -1,5 +1,12 @@
 <?php
 include_once '../src/common/initialization.php';
+
+// Require authentication
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
 $page_title = 'Home';
 // TOP
 include_once('./common/top.php');

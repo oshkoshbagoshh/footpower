@@ -22,16 +22,11 @@ error_reporting(E_ALL );
 session_start();
 
 
-// have we not created a token for this session, or has the token expired?
-if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
-    $_SESSION['token'] = bin2hex('session&strong');
-    $_SESSION['token_expires'] = time() + 900;
-    $_SESSION['log_id'] = 1; // temporary - will change this to user's log ID value when signed in
-
-}
-
 // include the app constants
 include_once 'constants.php';
+
+// Include autoloader for classes
+include_once 'autoload.php';
 
 // Connect to the database
 $mysqli = new MySQLi(HOST, USER, PASSWORD, DATABASE, PORT);
@@ -41,6 +36,25 @@ if ($mysqli->connect_error) {
     echo 'Connection failed! \n 
     Error #' . $mysqli->connect_errno . ': ' . $mysqli->connect_error;
     exit(0);
+}
+
+// have we not created a token for this session, or has the token expired?
+if (!isset($_SESSION['token']) || time() > $_SESSION['token_expires']) {
+    $_SESSION['token'] = bin2hex('session&strong');
+    $_SESSION['token_expires'] = time() + 900;
+}
+
+// Set log_id from session if user is logged in, otherwise use temporary value
+if (!isset($_SESSION['log_id'])) {
+    if (isset($_SESSION['user_id'])) {
+        // User is logged in, but log_id not set - fetch it from database
+        include_once __DIR__ . '/../classes/User.php';
+        $user = new User($mysqli);
+        $log_id = $user->getUserLogId($_SESSION['user_id']);
+        $_SESSION['log_id'] = $log_id ?: 1;
+    } else {
+        $_SESSION['log_id'] = 1; // temporary - will change when user signs in
+    }
 }
 
 
