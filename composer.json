@@ -5,18 +5,21 @@
     "php": "^8.2",
     "ext-mysqli": "*",
     "monolog/monolog": "^3.9",
-    "ext-curl": "*"
+    "ext-curl": "*",
+    "phpmailer/phpmailer": "^6.9"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
-    "phpunit/phpunit": "^12.3",
+    "phpunit/phpunit": "^11.0",
     "friendsofphp/php-cs-fixer": "@stable",
     "squizlabs/php_codesniffer": "@stable",
-    "php-debugbar/php-debugbar": "*"
+    "php-debugbar/php-debugbar": "*",
+    "fakerphp/faker": "^1.23"
   },
   "scripts": {
     "dev": "php -S localhost:8000 -t public",
     "test": "vendor/bin/phpunit",
+    "test-auth": "php tests/test_auth.php",
     "cs-check": [
       "vendor/bin/php-cs-fixer fix --dry-run --diff --ansi",
       "vendor/bin/phpcs --standard=PSR12 -q"
