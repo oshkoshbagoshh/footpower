@@ -23,11 +23,33 @@ define('ACTIVITY_ID', 1);
 define('LOG_ID', 1);
 define('LOG_ID', 1);
 
-// DATABASE CONFIGURATION
-//echo "-- DATABASE CONFIGURATION --\n";
-//echo "Host is " . constant('HOST') . "\n";
-//echo "User is " . constant('USER') ."\n";
-//echo "Password is " . constant('PASSWORD') ."\n";
-//echo "Database is " . constant('DATABASE') ."\n";
-//echo "----------\n";
-//
+
+
+// EMAIL CONFIGURATION
+define('EMAIL_HOST', 'smtp.gmail.com');
+define('EMAIL_PORT', 587);
+define('EMAIL_USERNAME', 'your_email@gmail.com');
+define('EMAIL_PASSWORD', 'your_password');
+define('EMAIL_FROM', 'your_email@gmail.com');
+define('EMAIL_FROM_NAME', 'Your Name');
+define('EMAIL_REPLY_TO', 'your_email@gmail.com');
+define('EMAIL_REPLY_TO_NAME', 'Your Name');
+define('EMAIL_CC', 'your_email@gmail.com');
+define('EMAIL_BCC', 'your_email@gmail.com');
+define('EMAIL_SUBJECT', 'Test Email');
+define('EMAIL_BODY', 'This is a test email');
+
+
+// MAILBOX 
+define('EMAIL_HOST', 'sandbox.smtp.mailtrap.io');
+define('EMAIL_PORT', 2525);
+define('EMAIL_USERNAME', '98375ee38dd5b6');
+define('EMAIL_PASSWORD', '****5170');
+define('EMAIL_FROM', 'your_email@gmail.com');
+define('EMAIL_FROM_NAME', 'Your Name');
+define('EMAIL_REPLY_TO', 'your_email@gmail.com');
+define('EMAIL_REPLY_TO_NAME', 'Your Name');
+define('EMAIL_CC', 'your_email@gmail.com');
+define('EMAIL_BCC', 'your_email@gmail.com');
+define('EMAIL_SUBJECT', 'Test Email');
+define('EMAIL_BODY', 'This is a test email');
